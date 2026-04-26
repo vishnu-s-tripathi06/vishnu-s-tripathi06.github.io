@@ -1,0 +1,474 @@
+/* -------------------- */
+/* PROJECT SECTION UPGRADE */
+/* Apple + Liquid Glass Style */
+/* -------------------- */
+/* HERO SECTION — Restore Previous Premium Apple Style */
+
+header {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(
+    135deg,
+    #f5f7fa 0%,
+    #e8f0ff 50%,
+    #f3ecff 100%
+  );
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #1d1d1f;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #6e6e73;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 28px;
+  background: #0071e3;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+#projects {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 28px;
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+
+  transition: all 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 113, 227, 0.10),
+    rgba(124, 77, 255, 0.06),
+    transparent 70%
+  );
+
+  top: -80px;
+  right: -80px;
+  z-index: 0;
+}
+
+.project * {
+  position: relative;
+  z-index: 1;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.project img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 22px;
+  display: block;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.project h3 a {
+  text-decoration: none;
+  color: #1d1d1f;
+  transition: 0.2s ease;
+}
+
+.project h3 a:hover {
+  color: #0071e3;
+}
+
+.project p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+
+/* -------------------- */
+/* SKILLS SECTION */
+/* -------------------- */
+/* -------------------- */
+/* SKILLS SECTION UPGRADE */
+/* Premium Glass + Hover Effects */
+/* -------------------- */
+
+#skills {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 50px 40px;
+
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+
+  position: relative;
+  overflow: hidden;
+}
+
+#skills::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 113, 227, 0.08),
+    rgba(124, 77, 255, 0.05),
+    transparent 70%
+  );
+
+  top: -100px;
+  right: -80px;
+  z-index: 0;
+}
+
+#skills > * {
+  position: relative;
+  z-index: 1;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.skills-grid span {
+  padding: 14px 24px;
+  border-radius: 999px;
+
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #1d1d1f;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  transition: all 0.28s ease;
+  cursor: default;
+}
+
+/* Premium hover effect */
+
+.skills-grid span:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+/* Individual soft color hues */
+
+.skills-grid span:nth-child(1) {
+  background: rgba(255, 234, 167, 0.55); /* Java */
+}
+
+.skills-grid span:nth-child(2) {
+  background: rgba(168, 230, 207, 0.55); /* Python */
+}
+
+.skills-grid span:nth-child(3) {
+  background: rgba(174, 214, 241, 0.55); /* SQL */
+}
+
+.skills-grid span:nth-child(4) {
+  background: rgba(220, 214, 247, 0.55); /* SQLite */
+}
+
+.skills-grid span:nth-child(5) {
+  background: rgba(255, 204, 188, 0.55); /* Spring Boot */
+}
+
+.skills-grid span:nth-child(6) {
+  background: rgba(255, 245, 157, 0.55); /* Flask */
+}
+
+.skills-grid span:nth-child(7) {
+  background: rgba(255, 224, 178, 0.55); /* AWS */
+}
+
+.skills-grid span:nth-child(8) {
+  background: rgba(187, 222, 251, 0.55); /* Azure */
+}
+
+.skills-grid span:nth-child(9) {
+  background: rgba(200, 230, 201, 0.55); /* GCP */
+}
+
+.skills-grid span:nth-child(10) {
+  background: rgba(248, 187, 208, 0.55); /* C++ */
+}
+
+.skills-grid span:nth-child(11) {
+  background: rgba(178, 235, 242, 0.55); /* IoT */
+}
+
+.skills-grid span:nth-child(12) {
+  background: rgba(225, 190, 231, 0.55); /* Cloud */
+}
+
+.skills-grid span:nth-child(13) {
+  background: rgba(207, 216, 220, 0.55); /* Git */
+}
+
+.skills-grid span:nth-child(14) {
+  background: rgba(238, 238, 238, 0.55); /* GitHub */
+}
+
+.skills-grid span:nth-child(15) {
+  background: rgba(255, 205, 210, 0.55); /* Problem Solving */
+}
+
+
+
+/* CONTACT SECTION — Original Premium Glass Buttons */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+.glass-btn {
+  padding: 16px 28px;
+  text-decoration: none;
+  color: #1d1d1f;
+  font-weight: 500;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+
+  transition: all 0.25s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.glass-btn:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 40px rgba(31, 38, 135, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.glass-btn i {
+  font-size: 1.1rem;
+}
+
+
+
+
+/* -------------------- */
+/* ACHIEVEMENTS SECTION */
+/* Same style as Skills */
+/* -------------------- */
+
+#achievements {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 50px 40px;
+
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+
+  position: relative;
+  overflow: hidden;
+}
+
+#achievements::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 159, 67, 0.08),
+    rgba(255, 99, 132, 0.05),
+    transparent 70%
+  );
+
+  top: -100px;
+  right: -80px;
+  z-index: 0;
+}
+
+#achievements > * {
+  position: relative;
+  z-index: 1;
+}
+
+.achievements-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.achievements-grid span {
+  padding: 14px 24px;
+  border-radius: 999px;
+
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #1d1d1f;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  transition: all 0.28s ease;
+  cursor: default;
+}
+
+.achievements-grid span:hover {
+  transform: translateY(-6px) scale(1.03);
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+}
+/* -------------------- */
+/* MOBILE RESPONSIVE */
+/* -------------------- */
+
+@media (max-width: 768px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 2.3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+#skills,
+#achievements {
+  padding: 35px 20px;
+}
+
+  .contact-links {
+    gap: 14px;
+  }
+
+  .glass-btn {
+    padding: 14px 22px;
+    font-size: 0.95rem;
+  }
+
+}
