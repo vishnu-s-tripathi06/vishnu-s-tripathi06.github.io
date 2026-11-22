@@ -7,6 +7,18 @@
 
   <title>Vishnu Shankar Tripathi | Portfolio</title>
 
+  <!-- Theme Initialization (Prevents FOUC/Flicker) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
   <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css">
 
@@ -17,18 +29,85 @@
 
 <body>
 
+  <!-- FLOATING GLASS NAVIGATION BAR -->
+  <nav class="glass-nav" id="main-nav" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" aria-label="Vishnu Shankar Tripathi">
+        <span class="logo-mark">V</span>ST
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#achievements" class="mobile-nav-link">Achievements</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </nav>
+
   <!-- HERO SECTION -->
   <header>
-    <img src="image.png" alt="Profile Photo" class="profile-img">
+    <img src="image.jpg" alt="Profile Photo" class="profile-img">
 
     <h1>Vishnu Shankar Tripathi</h1>
 
-    <p>
-      Java Developer | Student | Problem Solver |
-      Python | MySQL
+    <p class="hero-role">Aspiring Software Developer</p>
+
+    <p class="hero-intro">
+      Passionate about software development, programming in Java and Python, and consistent problem-solving. Interested in building practical software projects, exploring core systems, and writing clean, scalable code.
     </p>
 
-    <a href="#projects" class="btn">View Projects</a>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">
+        <span>Explore Projects</span>
+        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+      </a>
+
+      <a href="https://github.com/vishnu-s-tripathi06"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-glass"
+         aria-label="GitHub Profile">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+        <span>GitHub</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/vishnu-shankar-tripathi/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-glass"
+         aria-label="LinkedIn Profile">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <span class="btn btn-glass btn-disabled"
+            title="Resume will be available soon"
+            aria-disabled="true">
+        <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+        <span>Resume Coming Soon</span>
+      </span>
+    </div>
   </header>
 
 
@@ -36,30 +115,90 @@
   <section id="about">
     <h2>About Me</h2>
 
-    <p> I am a student at sharda University. I am passinate about java development and everything related to backend. I have programmed in python, SQL , sqlite3 and used spring boot and Flask to build molithic backends. I am also handy with tools like MicroSoft Azure, AWS and Google Cloud Platform. I have hands on experience with C++ as I specialize in IoT and Cloud computing.</p> <p> When it comes to soft skills I consider that my strong suit as I am fluent in English, native in Hindi and I understand Bengali completely fine. I have been in many debate competetions and have worked with others in Github club at sharda University. I am also the Co-Lead of Github club. </p>
+    <p>
+      I am currently pursuing a Bachelor of Computer Applications (BCA) at Sharda University, with a strong interest in software development and computational problem-solving. My journey is focused on building a solid engineering foundation through disciplined programming practice and understanding how software systems operate under the hood.
+    </p>
+
+    <p>
+      My primary languages are Java, Python, and SQL. To strengthen my analytical thinking and write more efficient solutions, I actively practice Data Structures and Algorithms. I enjoy translating complex logic into practical, reliable implementations.
+    </p>
+
+    <p>
+      I am excited about open-source collaboration, learning new technologies, and contributing to real-world software projects. Driven by curiosity and consistency, I continuously work on practical projects to expand my capabilities and become a well-rounded software developer.
+    </p>
   </section>
 
 
   <!-- SKILLS SECTION -->
   <section id="skills">
-    <h2>Skills</h2>
+    <h2>Skills & Technologies</h2>
 
-    <div class="skills-grid">
-      <span>Java</span>
-      <span>Python</span>
-      <span>SQL</span>
-      <span>SQLite3</span>
-      <span>Spring Boot</span>
-      <span>Flask</span>
-      <span>AWS</span>
-      <span>Microsoft Azure</span>
-      <span>Google Cloud Platform</span>
-      <span>C++</span>
-      <span>IoT</span>
-      <span>Cloud Computing</span>
-      <span>Git</span>
-      <span>GitHub</span>
-      <span>Problem Solving</span>
+    <div class="skills-category-group">
+
+      <!-- Category: Programming Languages -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+          Programming Languages
+        </h3>
+        <div class="skills-badges">
+          <span class="skill-badge skill-java">Java</span>
+          <span class="skill-badge skill-python">Python</span>
+          <span class="skill-badge skill-js">JavaScript</span>
+          <span class="skill-badge skill-sql">SQL</span>
+        </div>
+      </div>
+
+      <!-- Category: Frontend Development -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+          Frontend Development
+        </h3>
+        <div class="skills-badges">
+          <span class="skill-badge skill-html">HTML</span>
+          <span class="skill-badge skill-css">CSS</span>
+          <span class="skill-badge skill-bootstrap">Bootstrap</span>
+        </div>
+      </div>
+
+      <!-- Category: Backend Development -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <i class="fa-solid fa-server" aria-hidden="true"></i>
+          Backend Development
+        </h3>
+        <div class="skills-badges">
+          <span class="skill-badge skill-flask">Flask</span>
+          <span class="skill-badge skill-fastapi">FastAPI</span>
+        </div>
+      </div>
+
+      <!-- Category: Databases -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <i class="fa-solid fa-database" aria-hidden="true"></i>
+          Databases
+        </h3>
+        <div class="skills-badges">
+          <span class="skill-badge skill-sqlite">SQLite</span>
+          <span class="skill-badge skill-mysql">MySQL</span>
+        </div>
+      </div>
+
+      <!-- Category: Tools & Technologies -->
+      <div class="skill-category">
+        <h3 class="category-title">
+          <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+          Tools & Technologies
+        </h3>
+        <div class="skills-badges">
+          <span class="skill-badge skill-git">Git</span>
+          <span class="skill-badge skill-github">GitHub</span>
+          <span class="skill-badge skill-docker">Docker</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -70,74 +209,265 @@
 
     <div class="projects-grid">
 
-      <!-- PROJECT 1 -->
+      <!-- PROJECT 1: Life Logs -->
       <div class="project">
-        <img src="images/project1.jpg" alt="JuteBox Project">
+        <div class="project-header">
+          <div class="project-badge-icon">
+            <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
+          </div>
+          <a href="https://github.com/vishnu-s-tripathi06/Life-logs"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="project-icon-link"
+             aria-label="Life Logs GitHub Repository">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
 
         <h3>
-          <a href="https://github.com/vishnu-s-tripathi06/cs50p-final-project"
-             target="_blank">
-            JuteBox
+          <a href="https://github.com/vishnu-s-tripathi06/Life-logs"
+             target="_blank"
+             rel="noopener noreferrer">
+            Life Logs
           </a>
         </h3>
 
         <p>
-          A CLI-based application that helps users manage their movie
-          collection. Users can track watched movies, watchlists, ratings,
-          and share collections with friends using a simple link.
+          A personal blogging and journaling web application designed for capturing and sharing thoughts, updates, and reflections in a clean, readable layout. Features server-rendered home feeds and dedicated individual post views.
         </p>
 
         <p>
-          Built using Object-Oriented Python and SQLite3. Future plans
-          include building a dedicated Java + Spring Boot backend and
-          converting the application into a GUI-based platform.
+          Built with FastAPI and Jinja2 templates, featuring RESTful API routes, Pydantic schema validation for request payloads, centralized exception handling returning contextual HTML/JSON error responses, and containerized deployment with Docker.
         </p>
+
+        <div class="project-tech-stack">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>SQLAlchemy</span>
+          <span>Jinja2</span>
+          <span>Pydantic</span>
+          <span>Docker</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="https://github.com/vishnu-s-tripathi06/Life-logs"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-glass project-btn">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>View Repository</span>
+          </a>
+        </div>
       </div>
 
-
-      <!-- PROJECT 2 -->
+      <!-- PROJECT 2: Flappy Bird -->
       <div class="project">
-        <img src="images/project2.jpg" alt="Backend Project">
+        <div class="project-header">
+          <div class="project-badge-icon">
+            <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+          </div>
+          <a href="https://github.com/vishnu-s-tripathi06/flappy-bird"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="project-icon-link"
+             aria-label="Flappy Bird GitHub Repository">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
 
         <h3>
-          <a href="#" target="_blank">
-            Backend Management System
+          <a href="https://github.com/vishnu-s-tripathi06/flappy-bird"
+             target="_blank"
+             rel="noopener noreferrer">
+            Flappy Bird
           </a>
         </h3>
 
         <p>
-          A backend-focused application designed for efficient data
-          management and scalable architecture using Java and Spring Boot.
+          A recreation of the classic arcade game built using Python and Pygame. Architected around object-oriented Pygame sprite classes with dynamic bird rotation animations corresponding to vertical ascent and descent velocity vectors.
         </p>
 
         <p>
-          Built with strong emphasis on REST APIs, clean architecture,
-          and cloud deployment readiness using AWS and Azure tools.
+          Implements a locked 40 FPS game loop, gravity and jump impulse physics on click, randomized pipe generation with configurable gaps, pixel-level bounding-box collision detection against boundaries and obstacles, and score tracking with restart logic.
         </p>
+
+        <div class="project-tech-stack">
+          <span>Python</span>
+          <span>Pygame</span>
+          <span>OOP</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="https://github.com/vishnu-s-tripathi06/flappy-bird"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-glass project-btn">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>View Repository</span>
+          </a>
+        </div>
       </div>
 
     </div>
   </section>
 
 
+  <!-- ACHIEVEMENTS SECTION -->
+  <section id="achievements">
+    <h2>Achievements & Certifications</h2>
 
+    <div class="achievements-cards-grid">
 
-<!-- ACHIEVEMENTS SECTION -->
+      <!-- ACHIEVEMENT 1: Harvard CS50P -->
+      <div class="achievement-card">
+        <div class="achievement-top">
+          <div class="achievement-icon">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <span class="achievement-badge-pill badge-completed">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            Completed
+          </span>
+        </div>
 
-<section id="achievements">
-  <h2>Achievements</h2>
+        <a href="assets/certificates/harvard-cs50p-certificate.pdf"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="certificate-preview"
+           aria-label="View Harvard CS50P Certificate preview in a new tab">
+          <img src="assets/certificates/harvard-cs50p-preview.png"
+               alt="Harvard CS50P Certificate Preview"
+               loading="lazy">
+          <div class="preview-overlay">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </div>
+        </a>
 
-  <div class="achievements-grid">
-    <span>CS50P Certificate – Harvard University</span>
-    <span>Core Member – IoT Club</span> 
-   <!--<span>Infusion Club – Sharda University</span> -->
-    <span>Multiple Debate Competitions</span>
-    <span>Cloud Computing Specialization</span>
-    <span>Java Backend Development Projects</span>
-    <span>Spring Boot Backend Experience</span>
-    <span>Hands-on AWS / Azure / GCP</span>
+        <h3>CS50's Introduction to Programming with Python</h3>
+        <p class="achievement-issuer">Harvard University / HarvardX</p>
+        <p>
+          Comprehensive coursework covering computational problem-solving, Python language fundamentals, object-oriented programming, unit testing, and algorithms.
+        </p>
+
+        <div class="certificate-actions">
+          <a href="assets/certificates/harvard-cs50p-certificate.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-glass cert-btn"
+             aria-label="View Harvard CS50P Certificate in new tab">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span>View Certificate</span>
+          </a>
+          <a href="assets/certificates/harvard-cs50p-certificate.pdf"
+             download="harvard-cs50p-certificate.pdf"
+             class="btn btn-glass cert-btn"
+             aria-label="Download Harvard CS50P Certificate PDF">
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+            <span>Download PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ACHIEVEMENT 2: NPTEL Examination -->
+      <div class="achievement-card">
+        <div class="achievement-top">
+          <div class="achievement-icon">
+            <i class="fa-solid fa-vr-cardboard" aria-hidden="true"></i>
+          </div>
+          <span class="achievement-badge-pill badge-topper">
+            <i class="fa-solid fa-award" aria-hidden="true"></i>
+            TOPPER — 90%
+          </span>
+        </div>
+
+        <a href="assets/certificates/nptel-foundations-of-virtual-reality.pdf"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="certificate-preview"
+           aria-label="View NPTEL Foundations of Virtual Reality Certificate preview in a new tab">
+          <img src="assets/certificates/nptel-preview.png"
+               alt="NPTEL Foundations of Virtual Reality Certificate Preview"
+               loading="lazy">
+          <div class="preview-overlay">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <h3>Foundations of Virtual Reality</h3>
+        <p class="achievement-issuer">NPTEL</p>
+        <p>
+          Scored 90% and achieved Topper distinction in the NPTEL examination for Foundations of Virtual Reality, covering 3D computer graphics, spatial perception, immersive interaction, and virtual environments.
+        </p>
+
+        <div class="certificate-actions">
+          <a href="assets/certificates/nptel-foundations-of-virtual-reality.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-glass cert-btn"
+             aria-label="View NPTEL Certificate in new tab">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <span>View Certificate</span>
+          </a>
+          <a href="assets/certificates/nptel-foundations-of-virtual-reality.pdf"
+             download="nptel-foundations-of-virtual-reality.pdf"
+             class="btn btn-glass cert-btn"
+             aria-label="Download NPTEL Certificate PDF">
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+            <span>Download PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ACHIEVEMENT 3: Power BI Certificate -->
+     <div class="achievement-card">
+  <div class="achievement-top">
+    <div class="achievement-icon">
+      <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+    </div>
+    <span class="achievement-badge-pill badge-completed">
+      <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+      Completed
+    </span>
   </div>
-</section>
+
+  <a href="assets/certificates/power-bi-certificate.pdf"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="certificate-preview-link"
+     aria-label="View Power BI certificate">
+    <img
+      src="assets/certificates/power-bi-preview.png"
+      alt="Introduction to Data Visualization with Tableau and Power BI certificate"
+      class="certificate-preview"
+      loading="lazy">
+  </a>
+
+  <h3>Introduction to Data Visualization with Tableau and Power BI</h3>
+  <p class="achievement-issuer">Sharda University</p>
+  <p>
+    Completed a 30-hour course covering data visualization using Tableau
+    and Power BI, with a focus on presenting and interpreting data through
+    visual reports and dashboards.
+  </p>
+
+  <div class="certificate-actions">
+    <a href="assets/certificates/power-bi-certificate.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-glass cert-btn">
+      <i class="fa-solid fa-eye" aria-hidden="true"></i>
+      <span>View Certificate</span>
+    </a>
+
+    <a href="assets/certificates/power-bi-certificate.pdf"
+       download
+       class="btn btn-glass cert-btn">
+      <i class="fa-solid fa-download" aria-hidden="true"></i>
+      <span>Download PDF</span>
+    </a>
+  </div>
+</div>
+  </section>
 
 
 
@@ -174,5 +504,7 @@
     <p>© 2026 Vishnu Shankar Tripathi</p>
   </footer>
 
+  <!-- Main JavaScript -->
+  <script src="script.js" defer></script>
 </body>
 </html>
