@@ -21,6 +21,7 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="activity.css">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet"
@@ -40,6 +41,7 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#activity" class="nav-link">Activity</a>
         <a href="#achievements" class="nav-link">Achievements</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
@@ -60,6 +62,7 @@
       <a href="#about" class="mobile-nav-link">About</a>
       <a href="#skills" class="mobile-nav-link">Skills</a>
       <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#activity" class="mobile-nav-link">Activity</a>
       <a href="#achievements" class="mobile-nav-link">Achievements</a>
       <a href="#contact" class="mobile-nav-link">Contact</a>
     </div>
@@ -184,6 +187,8 @@
         <div class="skills-badges">
           <span class="skill-badge skill-sqlite">SQLite</span>
           <span class="skill-badge skill-mysql">MySQL</span>
+        <span class="skill-badge skill-postgres">Postgres</span>
+        <span class="skill-badge skill-mongodb">MongoDB</span>
         </div>
       </div>
 
@@ -197,6 +202,8 @@
           <span class="skill-badge skill-git">Git</span>
           <span class="skill-badge skill-github">GitHub</span>
           <span class="skill-badge skill-docker">Docker</span>
+          <span class="skill-badge skill-powerbi">PowerBI</span>
+          <span class="skill-badge skill-linux">Linux</span>
         </div>
       </div>
 
@@ -309,6 +316,87 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- CODING ACTIVITY SECTION -->
+  <section id="activity" data-platform="github" aria-labelledby="activity-title">
+    <div class="activity-heading">
+      <div class="activity-heading-text">
+        <h2 id="activity-title">Coding Activity</h2>
+        <p class="activity-subtitle" id="activity-caption">Public GitHub contributions over the last 12 months.</p>
+      </div>
+
+      <div class="activity-toggle" role="group" aria-label="Choose activity source">
+        <button type="button" class="activity-toggle-btn is-active" data-platform="github" aria-pressed="true">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </button>
+        <button type="button" class="activity-toggle-btn" data-platform="leetcode" aria-pressed="false">
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+          <span>LeetCode</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="activity-panel">
+      <div class="activity-stats" role="group" aria-label="Activity summary">
+        <div class="activity-stat">
+          <span class="activity-stat-value" id="activity-total">—</span>
+          <span class="activity-stat-label" id="activity-total-label">contributions</span>
+        </div>
+        <div class="activity-stat">
+          <span class="activity-stat-value" id="activity-active-days">—</span>
+          <span class="activity-stat-label">active days</span>
+        </div>
+        <div class="activity-stat activity-stat-range">
+          <span class="activity-stat-value activity-stat-range-value" id="activity-range">Awaiting first sync</span>
+          <span class="activity-stat-label">rolling 12 months</span>
+        </div>
+      </div>
+
+      <div class="activity-stage" id="activity-stage">
+        <canvas id="activity-canvas" tabindex="0" aria-label="Interactive 3D activity calendar. Use arrow keys to inspect individual days."></canvas>
+        <div class="activity-fallback" id="activity-fallback" role="img" aria-label="2D activity calendar" hidden></div>
+
+        <div class="activity-status" id="activity-status" hidden>
+          <div class="activity-status-icon" id="activity-status-icon" aria-hidden="true">
+            <i class="fa-solid fa-circle-notch"></i>
+          </div>
+          <p class="activity-status-title" id="activity-status-title">Loading activity</p>
+          <p class="activity-status-text" id="activity-status-text">Preparing the calendar…</p>
+          <button type="button" class="activity-status-retry" id="activity-status-retry" hidden>Try again</button>
+        </div>
+
+        <div class="activity-tooltip" id="activity-tooltip" aria-hidden="true">
+          <span class="activity-tooltip-date" id="activity-tooltip-date"></span>
+          <span class="activity-tooltip-value"><strong id="activity-tooltip-count"></strong> <span id="activity-tooltip-unit"></span></span>
+        </div>
+
+        <div class="activity-legend" id="activity-legend" aria-hidden="true">
+          <span>Less</span>
+          <span class="activity-legend-swatch" style="background: var(--activity-l0)"></span>
+          <span class="activity-legend-swatch" style="background: var(--activity-l1)"></span>
+          <span class="activity-legend-swatch" style="background: var(--activity-l2)"></span>
+          <span class="activity-legend-swatch" style="background: var(--activity-l3)"></span>
+          <span class="activity-legend-swatch" style="background: var(--activity-l4)"></span>
+          <span>More</span>
+        </div>
+      </div>
+
+      <p class="activity-hint" id="activity-hint">
+        Drag to rotate · Scroll or pinch to zoom · Hover or tap a day
+        <span class="activity-hint-sep" aria-hidden="true">·</span>
+        <a href="https://github.com/vishnu-s-tripathi06" id="activity-profile-link" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a>
+      </p>
+
+      <details class="activity-details">
+        <summary>Activity summary as text</summary>
+        <div class="activity-summary" id="activity-summary"></div>
+      </details>
+
+      <p class="activity-sr-only" id="activity-live" role="status" aria-live="polite"></p>
     </div>
   </section>
 
@@ -507,5 +595,6 @@
 
   <!-- Main JavaScript -->
   <script src="script.js" defer></script>
+  <script type="module" src="activity.js"></script>
 </body>
 </html>
